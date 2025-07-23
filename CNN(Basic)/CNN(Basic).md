@@ -275,13 +275,16 @@ torch.Size([10, 5, 3, 3])
 ## 4. 卷积操作的参数详解
 
 ### 4.1 Padding（填充）
+
 Padding（填充）用于在输入特征图的边缘补零，以控制输出特征图的空间尺寸。
 
 - 公式：
-$$
-\text{padding} = \frac{\text{kernel\_size} - 1}{2}
-$$
-其中 kernel\_size 是卷积核的尺寸（如 3、5、7 等）。
+
+    ```
+    padding = (kernel_size - 1) / 2
+    ```
+
+其中 `kernel_size` 是卷积核的尺寸（如 3、5、7 等）。
 如果卷积核尺寸为奇数，这个公式可以保证输出尺寸与输入尺寸一致。
 
 #### 代码示例：Padding
